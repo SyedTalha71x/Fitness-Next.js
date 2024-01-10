@@ -74,12 +74,36 @@ body {
     transition: all;
     border-bottom: 3px solid red;
 }
-.aboutbtn:hover{
+
+.aboutbtn:hover {
     transition: .4s ease-in-out;
     background-color: transparent;
 }
-.pricingbtn:hover{
-  background-color: black;
-  color: white;
-  transition: .4s ease-in-out;
+
+.pricingbtn:hover {
+    background-color: black;
+    color: white;
+    transition: .4s ease-in-out;
+}
+
+.one_row img {
+    height: 60px;
+}
+
+.one_row h1 {
+    font-size: 23px;
+    font-weight: 700;
+
+}
+.servicesection h1{
+    font-size: 2.7rem;
+    font-weight: bolder;
+}
+.servicesection  p{
+    font-weight: light;
+}
+
+.one_row p {
+    font-size: 14px;
+    font-weight: light;
 }

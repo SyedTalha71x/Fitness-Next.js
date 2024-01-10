@@ -6,6 +6,9 @@ import Link from 'next/link';
 import Compartments from './compartments';
 import About from './about';
 import Pricing from './pricing';
+import Service from './service';
+import Footer from '@/Components/Footer';
+
 
 const roboto = Roboto({
   weight: '900',
@@ -37,8 +40,10 @@ export default function Home() {
         </div>
       </div>
       <Compartments />
-      <About/>
-      <Pricing/>
+      <About />
+      <Pricing />
+      <Service />
+      <Footer />
     </>
   )
 }
