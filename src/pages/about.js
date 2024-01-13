@@ -17,7 +17,7 @@ const about = () => {
   return (
     <div className={montserrat.className}>
       <div className="mainpage text-white my-40">
-        <div className="row grid grid-cols-2 ">
+        <div className="row_2 grid grid-cols-2 ">
           <div className="left-about">
             <img className='h-[50vh] w-[40vw] mx-auto ' src="https://static.vecteezy.com/system/resources/previews/022/653/988/non_2x/treadmill-in-modern-gym-toned-image-3d-rendering-generative-ai-free-photo.jpg" alt="" />
           </div>
