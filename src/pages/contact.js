@@ -15,7 +15,7 @@ const montserrat = Montserrat({
 
 const contact = () => {
     return (
-        <div className={montserrat.className}><section className="text-white  relative bg-[#0B031C]">
+        <div className={montserrat.className}><section id='contact' className="text-white  relative bg-[#0B031C]">
             <div className="container px-5 py-24 mx-auto">
                 <div className="flex flex-col text-center w-full mb-12">
                     <h1 className="sm:text-4xl text-4xl font-medium title-font uppercase mb-4 text-white">Contact Us</h1>

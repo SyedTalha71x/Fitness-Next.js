@@ -8,6 +8,11 @@ body {
     padding: 0px;
     box-sizing: border-box;
     background-color: black;
+    scroll-behavior: smooth;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 .home-content {

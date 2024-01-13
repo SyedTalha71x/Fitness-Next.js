@@ -2,6 +2,7 @@ import React from 'react'
 import { Montserrat } from 'next/font/google';
 import { Roboto } from 'next/font/google'
 import Link from 'next/link';
+import { CiUser } from "react-icons/ci";
 
 const roboto = Roboto({
     weight: '900',
@@ -30,9 +31,9 @@ const Navbar = () => {
                             <li className='m-2  font-medium '>Blogs</li>
                         </ul>
                     </div>
-                    <div className="rightnav">
-                        <button className="btn uppercase bg-red-600 text-white font-bold px-8 py-2 ">Join Us</button>
-                    </div>
+                    <Link className="rightnav" href={"/login"}>
+                        <CiUser className='userlogin font-bold  text-3xl cursor-pointer absolute top-3 right-10' />
+                    </Link>
 
                 </nav>
             </div>

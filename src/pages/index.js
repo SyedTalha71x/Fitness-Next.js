@@ -24,6 +24,9 @@ const montserrat = Montserrat({
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+  const NavigateClick = () => {
+    window.location.href = "/#contact"
+  }
   return (
     <>
       <div>
@@ -33,10 +36,10 @@ export default function Home() {
             <h4 className='text-[7rem] font-bold uppercase shape-2'>Body Shape</h4>
           </div>
 
-          <div className='uppercase text-3xl font-bold shape-3 '>Build your body and fitness with professional touch</div>
+          <div className='uppercase text-3xl font-bold shape-3 '>Transform your physique with professional touch</div>
 
           <div className="home_btn">
-            <button className="homebtn mt-7 uppercase bg-red-600 font-semibold text-white px-8 py-2 ">Join Us</button>
+            <button onClick={NavigateClick} className="homebtn mt-7 uppercase bg-red-600 font-semibold text-white px-8 py-2 ">Join Us</button>
           </div>
         </div>
       </div>
