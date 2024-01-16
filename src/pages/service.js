@@ -2,7 +2,7 @@ import React from 'react'
 import { Montserrat } from 'next/font/google';
 
 const montserrat = Montserrat({
-    weight: ['300', '400', '500', '700'],
+    weight: ['300', '400', '500', '700', '900'],
     subsets: ['latin'],
     display: 'swap',
 });
@@ -12,7 +12,9 @@ const service = () => {
         <div className={montserrat.className}>
             <div className="service_container h-full w-full p-8 bg-black mt-6 cursor-pointer">
                 <div className="servicesection p-8">
-                    <h1 className='my-3 uppercase font-extrabold text-white'>Why people choose us</h1>
+                    <div className={montserrat.className}>
+                    <h1 className='service_heading my-3 uppercase font-extrabold text-white'>Why people choose us</h1>
+                    </div>
                     <p className=' font-medium text-white'>Our Sports Experts and latest sports equipment are winning combination.</p>
                 </div>
 
@@ -69,7 +71,7 @@ const service = () => {
                                 <img src="https://preview.colorlib.com/theme/activitar/img/icons/chose-icon-6.png.webp" alt="" />
                             </div>
                             <h1 className="text-2xl uppercase font-extrabold mt-2">Focus on Your Health</h1>
-                            <p className="text-white mt-2  ">We Fully Focused on your Health, provide you a complete Diet Plans and Workouts according to your body requirements.</p>
+                            <p className="text-white mt-2  ">Full Focus on your Health, provide you a complete Diet Plans and Workouts according to your body requirements.</p>
                         </div>
                     </div>
 

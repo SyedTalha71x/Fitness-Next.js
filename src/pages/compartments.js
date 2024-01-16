@@ -21,8 +21,8 @@ const compartments = () => {
                     <div className={roboto.className}>
                         <h1 className='text-center w-full text-5xl font-extrabold uppercase'>Our Features</h1>
                     </div>
-                    <p className='text-center w-[50%] mt-4 m-auto'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque inventore cupiditate impedit quidem totam dicta voluptatibus hic soluta sed eveniet.</p>
-                    <div className="row flex justify-center items-center my-14 p-6">
+                    <p className='text-center w-[50%] mt-4 m-auto'>Here are some of our gold feature we provide.</p>
+                    <div className="row flex justify-center items-center my-14 p-10">
                         <div className="one_row m-2  text-center h-full w-full p-6">
                             <div >
                                 <div className="logo">
@@ -32,7 +32,7 @@ const compartments = () => {
                                     <h2 className='font-extrabold text-xl uppercase'>Weightlifting</h2>
                                 </div>
                                 <div className="small_para mt-3">
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde, esse?
+                                    We provide a proper Weightlifting and Strength Area.
                                 </div>
                             </div>
                         </div>
@@ -45,7 +45,7 @@ const compartments = () => {
                                     <h2 className='font-extrabold text-xl uppercase'>Nutritions</h2>
                                 </div>
                                 <div className="small_para mt-3">
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde, esse?
+                                    We provide a proper diet chart and nutrition plan to our clients.
                                 </div>
 
                             </div>
@@ -59,7 +59,7 @@ const compartments = () => {
                                     <h2 className='font-extrabold text-xl uppercase'>Cardio</h2>
                                 </div>
                                 <div className="small_para mt-3">
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde, esse?
+                                    A proper Cardio Section for Males and Females.
                                 </div>
 
                             </div>
@@ -73,7 +73,7 @@ const compartments = () => {
                                     <h2 className='font-extrabold text-xl uppercase'>Personal Training</h2>
                                 </div>
                                 <div className="small_para mt-3">
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde, esse?
+                                    We also provide 1 on 1 Personal Trainings.
                                 </div>
 
                             </div>

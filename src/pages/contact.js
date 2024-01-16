@@ -15,11 +15,11 @@ const montserrat = Montserrat({
 
 const contact = () => {
     return (
-        <div className={montserrat.className}><section id='contact' className="text-white  relative bg-[#0B031C]">
+        <div className={montserrat.className}><section id='contact' className="text-white  relative body-font cursor-pointer border-y-[1px] border-red-800">
             <div className="container px-5 py-24 mx-auto">
                 <div className="flex flex-col text-center w-full mb-12">
-                    <h1 className="sm:text-4xl text-4xl font-medium title-font uppercase mb-4 text-white">Contact Us</h1>
-                    <p className="lg:w-2/3 mx-auto  ">Feel free to contact us for any queries.</p>
+                    <h1 className="sm:text-4xl text-4xl font-medium title-font uppercase mb-4 text-white">Register Now</h1>
+                    <p className="lg:w-2/3 mx-auto font-medium  ">Register now and lets transform together..</p>
                 </div>
                 <div className="lg:w-1/2 md:w-2/3 mx-auto">
                     <div className="contact_row flex flex-wrap -m-2">
@@ -42,7 +42,7 @@ const contact = () => {
                             </div>
                         </div>
                         <div className="p-2 w-full">
-                            <button className="flex mx-auto text-black bg-white border-0 py-2 px-8 focus:outline-none hover:bg-black hover:text-white hover:font-bold rounded-sm uppercase text-lg">Submit</button>
+                            <button className="flex mx-auto text-black bg-white border-0 py-2 px-8 focus:outline-none hover:bg-black hover:text-white hover:font-bold rounded-md uppercase text-lg">Submit</button>
                         </div>
                     </div>
                 </div>

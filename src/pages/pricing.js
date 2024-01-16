@@ -19,12 +19,14 @@ const pricing = () => {
             <section className="bg-black text-white cursor-pointer pricingpage">
                 <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
                     <div className="pricec mx-auto max-w-screen-md text-center mb-8 lg:mb-12 text-white">
+                        <div className={montserrat.className}>
                         <h2 className="price_head mb-4 text-4xl tracking-tight uppercase font-extrabold dark:text-white">Choose your pricing plan</h2>
+                        </div>
                         <p className="price_desc mb-5 font-extrabold uppercase sm:text-md dark:text-gray-400">Choose your plan according to your feasibility and comfortability and come to the journey</p>
                     </div>
                     <div className="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-0 p-8 lg:space-y-0">
 
-                        <div className="services_rows flex flex-col p-6 mx-auto max-w-lg text-center bg-red-700 text-white shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
+                        <div className="services_rows flex flex-col p-6 mx-auto max-w-lg text-center bg-[#1A1A1A] text-white shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
                             <h3 className="mb-4 text-2xl font-bold uppercase">Normal</h3>
 
                             <div className="flex justify-center items-baseline my-8">
@@ -54,10 +56,10 @@ const pricing = () => {
                                     <span>1 Free personal training</span>
                                 </li>
                             </ul>
-                            <button className="pricingbtn rounded-md bg-red-800 text-white font-semibold uppercase py-3 px-8">Get Started</button>
+                            <button className="pricingbtn rounded-sm bg-red-600 text-white font-semibold uppercase py-3 px-8">Get Started</button>
                         </div>
 
-                        <div className=" services_rows flex flex-col p-6 mx-auto max-w-lg text-center bg-red-700 text-white shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
+                        <div className=" services_rows flex flex-col p-6 mx-auto max-w-lg text-center bg-[#1A1A1A] text-white shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
                             <h3 className="mb-4 text-2xl font-bold uppercase">Professional</h3>
 
                             <div className="flex justify-center items-baseline my-8">
@@ -88,10 +90,10 @@ const pricing = () => {
                                 </li>
 
                             </ul>
-                            <button className="pricingbtn rounded-md bg-red-800 text-white font-semibold uppercase py-3 px-8">Get Started</button>
+                            <button className="pricingbtn rounded-sm bg-red-600 text-white font-semibold uppercase py-3 px-8">Get Started</button>
                         </div>
 
-                        <div className="services_rows flex flex-col p-6 mx-auto max-w-lg text-center bg-red-700 text-white shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
+                        <div className="services_rows flex flex-col p-6 mx-auto max-w-lg text-center bg-[#1A1A1A] text-white shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
                             <h3 className="mb-4 text-2xl font-bold uppercase">Advanced</h3>
 
                             <div className="flex justify-center items-baseline my-8">
@@ -122,7 +124,7 @@ const pricing = () => {
                                 </li>
 
                             </ul>
-                            <button className="pricingbtn rounded-md bg-red-800 text-white font-semibold uppercase py-3 px-8">Get Started</button>
+                            <button className="pricingbtn rounded-sm bg-red-600 text-white font-semibold uppercase py-3 px-8">Get Started</button>
                         </div>
                     </div>
                 </div>
