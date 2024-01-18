@@ -16,7 +16,7 @@ const montserrat = Montserrat({
 const pricing = () => {
     return (
         <div className={montserrat.className}>
-            <section className="bg-black text-white cursor-pointer pricingpage">
+            <section className="bg-black text-white cursor-pointer pricingpage" id='pricing'>
                 <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
                     <div className="pricec mx-auto max-w-screen-md text-center mb-8 lg:mb-12 text-white">
                         <div className={montserrat.className}>

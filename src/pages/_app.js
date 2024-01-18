@@ -10,8 +10,6 @@ export default function App({ Component, pageProps }) {
   const [key, setkey] = useState(0);
   const router = useRouter();
 
-
-
   return <>
 
 
@@ -23,5 +21,5 @@ export default function App({ Component, pageProps }) {
         content='The best Fitness and Health Portal for Everyone'
       />
     </Head>
-    <Component {...pageProps} /> </>
+    <Component user={user} {...pageProps} /> </>
 }

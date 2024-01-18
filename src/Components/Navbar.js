@@ -24,11 +24,14 @@ const Navbar = () => {
                     </div>
                     <div className="middlenav">
                         <ul className='flex justify-center uppercase'>
-                            <li className='m-2  font-medium '>Home</li>
-                            <li className='m-2  font-medium '>About</li>
-                            <li className='m-2  font-medium '>Contact</li>
-                            <li className='m-2  font-medium '>Pricing</li>
-                            <li className='m-2  font-medium '>Blogs</li>
+                            <div className='nav_rows'>
+                                <Link href={"/"} className='m-2  font-medium '>Home</Link>
+                                <Link href={"/#about"} className='m-2  font-medium '>About</Link>
+                                <Link href={"/#contact"} className='m-2  font-medium '>Contact</Link>
+                                <Link href={"/#services"} className='m-2  font-medium '>Facilities</Link>
+                                <Link href={"/#pricing"} className='m-2  font-medium '>Pricing</Link>
+                                <Link href={"/#blogs"} className='m-2  font-medium '>Blogs</Link>
+                            </div>
                         </ul>
                     </div>
                     <Link className="rightnav" href={"/login"}>

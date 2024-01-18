@@ -10,10 +10,10 @@ const montserrat = Montserrat({
 const service = () => {
     return (
         <div className={montserrat.className}>
-            <div className="service_container h-full w-full p-8 bg-black mt-6 cursor-pointer">
+            <div className="service_container h-full w-full p-8 bg-black mt-6 cursor-pointer" id='services'>
                 <div className="servicesection p-8">
                     <div className={montserrat.className}>
-                    <h1 className='service_heading my-3 uppercase font-extrabold text-white'>Why people choose us</h1>
+                        <h1 className='service_heading my-3 uppercase font-extrabold text-white'>Why people choose us</h1>
                     </div>
                     <p className=' font-medium text-white'>Our Sports Experts and latest sports equipment are winning combination.</p>
                 </div>

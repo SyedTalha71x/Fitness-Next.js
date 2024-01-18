@@ -12,7 +12,6 @@ const montserrat = Montserrat({
 });
 
 
-
 const login = () => {
 
   const [email, setemail] = useState()
@@ -27,6 +26,13 @@ const login = () => {
     }
 
   }
+  // useEffect(() => {
+  //   if (localStorage.getItem('token')) {
+  //     router.push("/");
+  //   }
+
+  // }, [])
+
 
   const router = useRouter();
 

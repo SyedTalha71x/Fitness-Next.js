@@ -127,7 +127,8 @@ html {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease-in-out;
 }
-.services_rows:hover{
+
+.services_rows:hover {
     border: 2px solid red;
     transition: .3s ease-in-out;
 }
@@ -161,8 +162,19 @@ html {
     opacity: 1;
 }
 
+@media screen and (max-width: 900px) {
+    nav ul {
+        font-size: 14px;
+        width: 100%;
+    }
+}
+
 
 @media screen and (max-width: 1200px) {
+    .footer_logo img {
+        display: none;
+    }
+
     .row {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -191,11 +203,12 @@ html {
     .right-about p {
         width: 100%;
     }
- 
+
 
 }
-@media screen and (max-width: 580px){
-    .trainers{
+
+@media screen and (max-width: 580px) {
+    .trainers {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -206,6 +219,50 @@ html {
 }
 
 @media screen and (max-width:970px) {
+    .features-content h1 {
+        font-size: 28px;
+    }
+
+    .features-content p {
+        font-size: 15px;
+    }
+
+    .price_head {
+        font-size: 28px;
+    }
+
+    .price_desc {
+        font-size: 15px;
+    }
+
+    .services_rows {
+        font-size: 16px;
+    }
+
+    .train_section_heading h1 {
+        font-size: 28px;
+    }
+
+    .train_section_heading p {
+        font-size: 15px;
+    }
+
+    .servicesection h1 {
+        font-size: 28px;
+    }
+
+    .servicesection p {
+        font-size: 15px;
+    }
+
+    #contact h1 {
+        font-size: 28px;
+    }
+
+    #contact p {
+        font-size: 15px;
+    }
+
     .home-content {
         width: 100%;
 
@@ -261,5 +318,13 @@ html {
         text-align: center;
         width: 100%;
     }
+}
+
+@media screen and (max-width: 470px) {
+    .nav_rows {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
 
 }

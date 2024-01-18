@@ -16,7 +16,7 @@ const montserrat = Montserrat({
 const about = () => {
   return (
     <div className={montserrat.className}>
-      <div className="mainpage text-white my-40">
+      <div className="mainpage text-white my-40" id='about'>
         <div className="row_2 grid grid-cols-2 ">
           <div className="left-about">
             <img className='h-[50vh] w-[40vw] mx-auto ' src="https://cdn.shopify.com/s/files/1/1775/6429/files/YLA_Group_Photo-6_600x600.jpg?v=1651596188" alt="" />
