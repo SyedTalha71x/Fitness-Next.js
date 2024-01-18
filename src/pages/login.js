@@ -12,7 +12,7 @@ const montserrat = Montserrat({
 });
 
 
-const login = () => {
+const Login = () => {
 
   const [email, setemail] = useState()
   const [password, setpassword] = useState()
@@ -112,7 +112,7 @@ const login = () => {
                 </div>
                 <button type="submit" className="w-full text-white bg-black py-3 uppercase ">Login</button>
                 <p className="text-sm font-light text-gray-500 dark:text-gray-400">
-                  Don’t have an account yet? <Link href={"/signup"} className="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign up</Link>
+                  Don’t have an account yet? <Link href={"/Signup"} className="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign up</Link>
                 </p>
               </form>
             </div>
@@ -123,4 +123,4 @@ const login = () => {
 }
 
 
-export default login
+export default Login
