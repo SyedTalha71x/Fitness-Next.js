@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link';
 import { Montserrat } from 'next/font/google';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
-import Router, { useRouter } from 'next/router';
+import  { useRouter } from 'next/router';
 
 
 const montserrat = Montserrat({
@@ -26,12 +26,6 @@ const login = () => {
     }
 
   }
-  // useEffect(() => {
-  //   if (localStorage.getItem('token')) {
-  //     router.push("/");
-  //   }
-
-  // }, [])
 
 
   const router = useRouter();

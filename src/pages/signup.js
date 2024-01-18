@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Montserrat } from 'next/font/google';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
-import Router, { useRouter } from 'next/router';
+import { useRouter } from 'next/router';
 
 
 const montserrat = Montserrat({
