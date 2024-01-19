@@ -1,11 +1,11 @@
 import connectDB from "../../../Middleware/db";
 import User from "../../../Models/User";
-
 var CryptoJS = require("crypto-js");
 var jwt = require('jsonwebtoken');
 
+
 connectDB();
-export default async function handler (req, res) {
+export default async function handler(req, res) {
     if (req.method === 'POST') {
         let userinfo = await User.findOne({ "email": req.body.email });
         var bytes = CryptoJS.AES.decrypt(userinfo.password, 'DoNtRuN$6w7s');

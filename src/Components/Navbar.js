@@ -3,6 +3,7 @@ import { Montserrat } from 'next/font/google';
 import { Roboto } from 'next/font/google'
 import Link from 'next/link';
 import { CiUser } from "react-icons/ci";
+import { FaCircleUser } from "react-icons/fa6";
 
 const roboto = Roboto({
     weight: '900',
@@ -14,7 +15,7 @@ const montserrat = Montserrat({
     subsets: ['latin'],
 });
 
-const Navbar = () => {
+const Navbar = ({ user }) => {
     return (
         <>
             <div className={montserrat.className}>
@@ -34,8 +35,11 @@ const Navbar = () => {
                             </div>
                         </ul>
                     </div>
+                    <div>
+                        {user.value && <FaCircleUser className='text-3xl font-extrabold cursor-pointer absolute top-3 right-10' />}
+                    </div>
                     <Link className="rightnav" href={"/login"}>
-                        <CiUser className='userlogin font-bold  text-3xl cursor-pointer absolute top-3 right-10' />
+                        {!user.value && <CiUser className='userlogin font-bold  text-3xl cursor-pointer absolute top-3 right-10' />}
                     </Link>
 
                 </nav>

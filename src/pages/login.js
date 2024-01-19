@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Montserrat } from 'next/font/google';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
-import  { useRouter } from 'next/router';
+import { useRouter } from 'next/router';
 
 
 const montserrat = Montserrat({
@@ -44,9 +44,8 @@ const Login = () => {
 
     let json = await response.json();
     console.log(json);
-    setemail('');
-    setpassword('');
     if (json.success) {
+      localStorage.setItem('token', json.token);
       toast.success("You are Now Logged In", {
         position: 'top-center',
         autoClose: 5000,
@@ -58,7 +57,7 @@ const Login = () => {
       });
       setTimeout(() => {
         router.push('http://localhost:3000')
-      }, 1000);
+      }, 2000);
     }
     else {
       toast.error(response.error, {
@@ -112,7 +111,7 @@ const Login = () => {
                 </div>
                 <button type="submit" className="w-full text-white bg-black py-3 uppercase ">Login</button>
                 <p className="text-sm font-light text-gray-500 dark:text-gray-400">
-                  Don’t have an account yet? <Link href={"/Signup"} className="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign up</Link>
+                  Don’t have an account yet? <Link href={"/signup"} className="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign up</Link>
                 </p>
               </form>
             </div>

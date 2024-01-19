@@ -44,9 +44,6 @@ const Signup = () => {
 
         let json = await response.json();
         console.log(json);
-        setname('')
-        setemail('')
-        setpassword('')
         if (json.success) {
             toast.success("You are Successfully Signup", {
                 position: 'top-center',
@@ -58,7 +55,7 @@ const Signup = () => {
                 progress: undefined,
             });
             setTimeout(() => {
-                router.push('http://localhost:3000/login')
+                router.push('/login')
             }, 1000);
         }
         else {
@@ -115,7 +112,7 @@ const Signup = () => {
                                 </div>
                                 <button type="submit" className="w-full text-white bg-black uppercase text-center py-3">Signup</button>
                                 <p className="text-sm font-light text-gray-500 dark:text-gray-400">
-                                    Already have an account? <Link href={"/Login"} className="font-medium text-primary-600 hover:underline dark:text-primary-500">Login here</Link>
+                                    Already have an account? <Link href={"/login"} className="font-medium text-primary-600 hover:underline dark:text-primary-500">Login here</Link>
                                 </p>
                             </form>
                         </div>
