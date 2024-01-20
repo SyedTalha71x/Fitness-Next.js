@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Montserrat } from 'next/font/google';
 import { Roboto } from 'next/font/google'
 import Link from 'next/link';
@@ -15,7 +15,9 @@ const montserrat = Montserrat({
     subsets: ['latin'],
 });
 
-const Navbar = ({ user }) => {
+const Navbar = ({ user, logout }) => {
+
+    const [dropdown, setdropdown] = useState(false)
     return (
         <>
             <div className={montserrat.className}>
@@ -36,7 +38,29 @@ const Navbar = ({ user }) => {
                         </ul>
                     </div>
                     <div>
-                        {user.value && <FaCircleUser className='text-3xl font-extrabold cursor-pointer absolute top-3 right-10' />}
+                        <a onMouseOver={() => { setdropdown(true) }}>
+                            {dropdown && <div className="z-50 my-5 h-[190px] absolute right-14 top-4 text-base list-none bg-slate-200 divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600">
+                                <div className="px-4 py-3">
+                                    <span className="block text-sm text-black dark:text-white">Admin</span>
+                                    <span className="block text-sm  text-gray-500 truncate dark:text-gray-400">admin@gmail.com</span>
+                                </div>
+                                <ul className="py-2" aria-labelledby="user-menu-button">
+
+                                    <hr className='bg-black w-3/4 m-auto' />
+
+                                    <hr className='bg-black  w-3/4 m-auto' />
+                                    <li>
+                                        <p onClick={logout} className="block px-4 py-2 text-sm text-black uppercase w-full hover:bg-gray-300 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Logout</p>
+                                    </li>
+                                    <hr className='bg-black w-3/4 m-auto' />
+                                    <li>
+                                        <p onClick={() => setdropdown(false)} className="block px-4 py-2 text-extrabold text-sm uppercase text-black w-full hover:bg-gray-300 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Exit</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            }
+                            {user.value && <FaCircleUser className='text-3xl font-extrabold cursor-pointer absolute top-3 right-10' />}
+                        </a>
                     </div>
                     <Link className="rightnav" href={"/login"}>
                         {!user.value && <CiUser className='userlogin font-bold  text-3xl cursor-pointer absolute top-3 right-10' />}

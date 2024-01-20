@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { Montserrat } from 'next/font/google';
 import { Roboto } from 'next/font/google'
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
+import { motion, useAnimation, useInView } from "framer-motion"
 
 const roboto = Roboto({
     weight: '900',
@@ -16,6 +17,18 @@ const montserrat = Montserrat({
 
 
 const contact = () => {
+    const ref = useRef(null);
+
+    const useinview = useInView(ref, { once: true });
+
+    const maincontrols = useAnimation();
+
+    useEffect(() => {
+        if (useinview) {
+            maincontrols.start("visible");
+        }
+    }, [useinview]);
+
     const [name, setname] = useState()
     const [email, setemail] = useState()
     const [message, setmessage] = useState()
@@ -81,7 +94,9 @@ const contact = () => {
                 draggable
             />
             <section id='contact' className="text-white  relative body-font cursor-pointer border-y-[1px] border-red-800">
-                <div className="container px-5 py-24 mx-auto">
+                <div
+
+                    className="container px-5 py-24 mx-auto">
                     <div className="flex flex-col text-center w-full mb-12">
                         <h1 className="sm:text-4xl text-4xl font-medium title-font uppercase mb-4 text-white">Register Now</h1>
                         <p className="lg:w-2/3 mx-auto font-medium  ">Register now and lets transform together..</p>

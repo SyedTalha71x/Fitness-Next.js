@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Montserrat } from 'next/font/google';
 import { Roboto } from 'next/font/google'
 import Link from 'next/link';
+import { motion, useAnimation, useInView } from "framer-motion"
 
 const roboto = Roboto({
     weight: '900',
@@ -15,12 +16,34 @@ const montserrat = Montserrat({
 
 
 const Trainers = () => {
+    const ref = useRef(null);
+
+    const useinview = useInView(ref, { once: true });
+
+    const maincontrols = useAnimation();
+
+    useEffect(() => {
+        if (useinview) {
+            maincontrols.start("visible");
+        }
+    }, [useinview]);
     return (
-        <div>
-            <div className="trainers_section">
+        <div ref={ref}>
+            <motion.div
+                variants={{
+                    hidden: { opacity: 0, y: 75 },
+                    visible: { opacity: 1, y: 0 }
+                }}
+                initial="hidden"
+                animate={maincontrols}
+                transition={{
+                    duration: 0.7, delay: 0.25
+                }}
+
+                className="trainers_section">
                 <div className="train_section_heading text-white text-center mt-5">
-                    <div  className={montserrat.className}>
-                    <h1 className='text-4xl font-extrabold tracking-wide uppercase'>Our Trainers</h1>
+                    <div className={montserrat.className}>
+                        <h1 className='text-4xl font-extrabold tracking-wide uppercase'>Our Trainers</h1>
                     </div>
                     <p className='w-full mt-2 font-semibold text-xl'>Meet with our Professional certified Fitness Trainers.</p>
 
@@ -49,7 +72,7 @@ const Trainers = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </motion.div>
 
 
         </div>

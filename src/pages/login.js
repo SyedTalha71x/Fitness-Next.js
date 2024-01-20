@@ -56,8 +56,8 @@ const Login = () => {
         progress: undefined,
       });
       setTimeout(() => {
-        router.push('http://localhost:3000')
-      }, 2000);
+        router.push('/')
+      }, 1000);
     }
     else {
       toast.error(response.error, {

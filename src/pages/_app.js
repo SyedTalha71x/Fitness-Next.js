@@ -19,10 +19,19 @@ export default function App({ Component, pageProps }) {
   }, [router.query])
 
 
+  const logout = () => {
+    localStorage.removeItem('token');
+    setuser({ value: null });
+    setkey(Math.random());
+    window.location.reload();
+    router.push('/');
+  }
+
+
   return <>
 
 
-    {key && <Navbar key={key} user={user} />}
+    {key && <Navbar key={key} user={user} logout={logout} />}
     <Head>
       <title>Fitness - Health Portal | o2 Gyms</title>
       <meta

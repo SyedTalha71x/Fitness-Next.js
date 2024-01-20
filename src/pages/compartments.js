@@ -1,4 +1,6 @@
-import React from 'react'
+import { motion, useAnimation, useInView } from "framer-motion"
+import { useEffect, useState, useRef } from 'react';
+
 import { Montserrat } from 'next/font/google';
 import { Roboto } from 'next/font/google'
 import Link from 'next/link';
@@ -14,9 +16,32 @@ const montserrat = Montserrat({
 });
 
 const compartments = () => {
+
+    const ref = useRef(null);
+
+    const useinview = useInView(ref, { once: true });
+
+    const maincontrols = useAnimation();
+
+    useEffect(() => {
+        if (useinview) {
+            maincontrols.start("visible");
+        }
+    }, [useinview]);
     return (
-        <div className={montserrat.className}>
-            <div className="compartments h-full w-full text-white my-10 cursor-pointer" id='compartments'>
+        <div ref={ref} className={montserrat.className}>
+            <motion.div
+                variants={{
+                    hidden: { opacity: 0, y: 75 },
+                    visible: { opacity: 1, y: 0 }
+                }}
+                initial="hidden"
+                animate={maincontrols}
+                transition={{
+                    duration: 0.7, delay: 0.25
+                }}
+
+                className="compartments h-full w-full text-white my-10 cursor-pointer" id='compartments'>
                 <div className="features-content">
                     <div className={roboto.className}>
                         <h1 className='text-center w-full text-5xl font-extrabold uppercase'>Our Features</h1>
@@ -81,7 +106,7 @@ const compartments = () => {
                     </div>
                 </div>
 
-            </div>
+            </motion.div>
         </div>
     )
 }

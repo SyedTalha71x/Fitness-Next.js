@@ -1,5 +1,6 @@
-import React from 'react'
-import { Montserrat } from 'next/font/google';
+import React, { useEffect, useRef } from 'react'
+import { Montserrat } from 'next/font/google'
+import { motion, useAnimation, useInView } from "framer-motion";
 
 const montserrat = Montserrat({
     weight: ['300', '400', '500', '700', '900'],
@@ -8,9 +9,31 @@ const montserrat = Montserrat({
 });
 
 const service = () => {
+
+    const ref = useRef(null);
+
+    const useinview = useInView(ref, { once: true });
+
+    const maincontrols = useAnimation();
+
+    useEffect(() => {
+        if (useinview) {
+            maincontrols.start("visible");
+        }
+    }, [useinview]);
     return (
-        <div className={montserrat.className}>
-            <div className="service_container h-full w-full p-8 bg-black mt-6 cursor-pointer" id='services'>
+        <div ref={ref} className={montserrat.className}>
+            <motion.div
+                variants={{
+                    hidden: { opacity: 0, y: 75 },
+                    visible: { opacity: 1, y: 0 }
+                }}
+                initial="hidden"
+                animate={maincontrols}
+                transition={{
+                    duration: 0.7, delay: 0.25
+                }}
+                className="service_container h-full w-full p-8 bg-black mt-6 cursor-pointer" id='services'>
                 <div className="servicesection p-8">
                     <div className={montserrat.className}>
                         <h1 className='service_heading my-3 uppercase font-extrabold text-white'>Why people choose us</h1>
@@ -76,7 +99,7 @@ const service = () => {
                     </div>
 
                 </div>
-            </div>
+            </motion.div>
         </div>
     )
 }

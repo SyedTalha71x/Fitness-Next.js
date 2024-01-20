@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Montserrat } from 'next/font/google';
 import { Roboto } from 'next/font/google'
 import Link from 'next/link';
+import { motion, useAnimation, useInView } from "framer-motion"
 
 const roboto = Roboto({
   weight: '900',
@@ -14,9 +15,30 @@ const montserrat = Montserrat({
 });
 
 const about = () => {
+  const ref = useRef(null);
+
+  const useinview = useInView(ref, { once: true });
+
+  const maincontrols = useAnimation();
+
+  useEffect(() => {
+    if (useinview) {
+      maincontrols.start("visible");
+    }
+  }, [useinview]);
   return (
-    <div className={montserrat.className}>
-      <div className="mainpage text-white my-40" id='about'>
+    <div ref={ref} className={montserrat.className}>
+      <motion.div
+        variants={{
+          hidden: { opacity: 0, y: 75 },
+          visible: { opacity: 1, y: 0 }
+        }}
+        initial="hidden"
+        animate={maincontrols}
+        transition={{
+          duration: 0.7, delay: 0.25
+        }}
+        className="mainpage text-white my-40" id='about'>
         <div className="row_2 grid grid-cols-2 ">
           <div className="left-about">
             <img className='h-[50vh] w-[40vw] mx-auto ' src="https://cdn.shopify.com/s/files/1/1775/6429/files/YLA_Group_Photo-6_600x600.jpg?v=1651596188" alt="" />
@@ -31,7 +53,7 @@ const about = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
 
     </div>
   )

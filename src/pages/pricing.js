@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Montserrat } from 'next/font/google';
 import { Roboto } from 'next/font/google'
 import Link from 'next/link';
+import { motion, useAnimation, useInView } from "framer-motion"
 
 const roboto = Roboto({
     weight: '900',
@@ -14,13 +15,37 @@ const montserrat = Montserrat({
 });
 
 const pricing = () => {
+    const ref = useRef(null);
+
+    const useinview = useInView(ref, { once: true });
+
+    const maincontrols = useAnimation();
+
+    useEffect(() => {
+        if (useinview) {
+            maincontrols.start("visible");
+        }
+    }, [useinview]);
     return (
-        <div className={montserrat.className}>
-            <section className="bg-black text-white cursor-pointer pricingpage" id='pricing'>
+        <div ref={ref} className={montserrat.className}>
+            <motion.section
+                variants={{
+                    hidden: { opacity: 0, y: 75 },
+                    visible: { opacity: 1, y: 0 }
+                }}
+                initial="hidden"
+                animate={maincontrols}
+                transition={{
+                    duration: 0.7, delay: 0.25
+                }}
+
+
+
+                className="bg-black text-white cursor-pointer pricingpage" id='pricing'>
                 <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
                     <div className="pricec mx-auto max-w-screen-md text-center mb-8 lg:mb-12 text-white">
                         <div className={montserrat.className}>
-                        <h2 className="price_head mb-4 text-4xl tracking-tight uppercase font-extrabold dark:text-white">Choose your pricing plan</h2>
+                            <h2 className="price_head mb-4 text-4xl tracking-tight uppercase font-extrabold dark:text-white">Choose your pricing plan</h2>
                         </div>
                         <p className="price_desc mb-5 font-extrabold uppercase sm:text-md dark:text-gray-400">Choose your plan according to your feasibility and comfortability and come to the journey</p>
                     </div>
@@ -128,7 +153,7 @@ const pricing = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </motion.section>
         </div>
     )
 }
