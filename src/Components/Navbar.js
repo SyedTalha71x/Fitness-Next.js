@@ -21,7 +21,7 @@ const Navbar = ({ user, logout }) => {
     return (
         <>
             <div className={montserrat.className}>
-                <nav className='h-full cursor-pointer text-white bg-transparent p-3 flex flex-col  md:flex-row md:justify-around justify-center items-center shadow-xl'>
+                <nav className='h-full cursor-pointer text-white bg-black p-3 flex flex-col  md:flex-row md:justify-around justify-center items-center shadow-xl'>
                     <div className="leftnav">
                         <Link href={"/home"} className=' font-bold text-2xl'>o2 Gyms <span className='text-red-600 font-extrabold'>.</span></Link>
                     </div>
@@ -33,7 +33,7 @@ const Navbar = ({ user, logout }) => {
                                 <Link href={"/#contact"} className='m-2  font-medium '>Contact</Link>
                                 <Link href={"/#services"} className='m-2  font-medium '>Facilities</Link>
                                 <Link href={"/#pricing"} className='m-2  font-medium '>Pricing</Link>
-                                <Link href={"/#blogs"} className='m-2  font-medium '>Blogs</Link>
+                                {/* <Link href={"/blogs"} className='m-2  font-medium '>Blogs</Link> */}
                             </div>
                         </ul>
                     </div>

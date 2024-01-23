@@ -13,6 +13,7 @@ import Tour from './tour';
 import Trainers from './Trainers';
 import { motion, useAnimation, useInView } from "framer-motion"
 import { useEffect, useState, useRef } from 'react';
+import Blogs from './blogs';
 
 
 const roboto = Roboto({
@@ -48,13 +49,13 @@ export default function Home() {
       <div ref={ref}>
         <motion.div
           variants={{
-            hidden: { opacity: 0, y: 75 },
+            hidden: { opacity: 0, y: 85 },
             visible: { opacity: 1, y: 0 }
           }}
           initial="hidden"
           animate={maincontrols}
           transition={{
-            duration: 0.7, delay: 0.25
+            duration: 0.9, delay: 0.25
           }}
           className="home-content cursor-pointer ">
           <div className='uppercase text-4xl font-extrabold shape-1'><span className='text-red-600'>build   </span> up your</div>

@@ -47,9 +47,12 @@ const about = () => {
             <div className="heading">
               <h3 className='text-4xl font-extrabold uppercase'>Our Story</h3>
               <p className='w-[90%] mt-4 font-medium'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error deleniti nobis ullam, eum iure esse beatae maiores! Tenetur, debitis consectetur repellendus id, doloribus saepe, suscipit ducimus quod aspernatur consequuntur odio! Eveniet, autem odit? Commodi placeat optio beatae quibusdam molestiae recusandae temporibus ipsam aliquam quam? Tempore ab accusantium excepturi, provident quibusdam veritatis saepe tenetur. Saepe sunt est doloribus, veritatis totam commodi.</p>
-              <button className="aboutbtn uppercase rounded-md bg-red-600 text-white py-3 px-10 cursor-pointer mt-4">
-                Read More
-              </button>
+              <div className='mt-6'>
+
+                <Link href={"/story"} className="aboutbtn uppercase mt-10 rounded-md bg-red-600 text-white py-3 px-10 cursor-pointer">
+                  Read More
+                </Link>
+              </div>
             </div>
           </div>
         </div>

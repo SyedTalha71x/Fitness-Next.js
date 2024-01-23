@@ -123,7 +123,7 @@ const contact = () => {
                                     </div>
                                 </div>
                                 <div className="p-2 w-full">
-                                    <button className="flex mx-auto text-black bg-white border-0 py-2 px-8 focus:outline-none hover:bg-black hover:text-white hover:font-bold rounded-md uppercase text-lg">Submit</button>
+                                    <button className="flex mx-auto text-white bg-red-600 border-0 py-2 px-8 focus:outline-none hover:bg-black hover:text-white hover:font-bold rounded-md uppercase text-lg hover:transition-all">Submit</button>
                                 </div>
                             </div>
                         </div>
